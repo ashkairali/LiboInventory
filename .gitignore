@@ -1,0 +1,38 @@
+# Libo Inventory - Git Ignore
+
+# SQLite databases
+*.sqlite
+*.sqlite3
+*.db
+
+# R temporary files
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio project files
+.Rproj.user/
+
+# Generated reports
+*.xlsx
+*.xls
+*.csv
+*.pdf
+
+# Temporary files
+*.tmp
+*.temp
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Local application data
+data/*
+
+# R package / deployment metadata
+.Renviron
+.Rprofile
