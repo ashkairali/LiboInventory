@@ -17,8 +17,8 @@ It is designed for libraries that need a lightweight system for conducting stock
 - Excel report generation
 - SQLite database storage
 - Web-based interface
-- Can be deployed on a local library server
-- Can be accessed through a web browser
+- Local library server support
+- Access through a web browser
 
 ## Technology
 
@@ -32,77 +32,85 @@ It is designed for libraries that need a lightweight system for conducting stock
 - openxlsx
 - SQLite
 
-## Requirements
+---
 
-- Windows 10 or later
-- R 4.6.0 or later
-- Internet connection for the initial installation of R packages
+# Installation
 
-## Installation
+## Recommended: Windows Installer
 
-### 1. Install R
+For normal users, **no separate R or RStudio installation is required**.
 
-Download and install R from:
+### Step 1: Download Libo Inventory
 
-https://cran.r-project.org/
+Go to the **Releases** section of this GitHub repository and download:
 
-### 2. Download Libo Inventory
+**`LiboInventory_Setup.exe`**
 
-Download the Libo Inventory repository from GitHub.
-
-You can either download the ZIP file or clone the repository using Git.
-
-### 3. Install required packages
-
-Open the Libo Inventory folder and double-click:
-
-`Install-Libo-Inventory.bat`
-
-The installer will install the required R packages.
-
-### 4. Start Libo Inventory
+### Step 2: Install
 
 Double-click:
 
-`Start-Libo-Inventory.bat`
+`LiboInventory_Setup.exe`
 
-The application will start the Libo Inventory Shiny server.
+Follow the installation instructions.
 
-Open the address shown by the application in a web browser.
+The installer will install Libo Inventory and its required components.
 
-Normally:
+### Step 3: Start Libo Inventory
+
+After installation, start **Libo Inventory** using the installed application.
+
+The application will start a local web server.
+
+### Step 4: Open Libo Inventory
+
+Open a web browser and go to:
 
 `http://localhost:3838`
 
-## Running on a Library Server
+The Libo Inventory interface should appear in your browser.
 
-Libo Inventory can be run on a computer that acts as a local library server.
+---
 
-The application listens on port `3838`.
+# Running on a Library Server
+
+Libo Inventory can be installed on a computer that acts as a local library server.
+
+The application uses port **3838**.
 
 For example, if the server computer has the local IP address:
 
 `192.168.1.25`
 
-other computers on the same network can access:
+other computers on the same local network can access:
 
 `http://192.168.1.25:3838`
 
-The server computer must be running Libo Inventory.
+### Important
 
-Windows Firewall may need to allow incoming connections on port `3838`.
+The server computer must be running Libo Inventory for other computers to access the application.
 
-## Data Storage
+Windows Firewall may need to allow incoming connections on port **3838**.
 
-Libo Inventory uses SQLite for local data storage.
+For institutional use, it is recommended that the application be installed on a dedicated library/server computer.
+
+---
+
+# Data Storage
+
+Libo Inventory uses **SQLite** for local data storage.
 
 Application data is stored locally on the computer running Libo Inventory.
 
-The database and local inventory data are intentionally excluded from the GitHub repository.
+The database and local inventory data are intentionally excluded from the public GitHub repository.
 
-**Do not upload library inventory data, personal data, or other confidential information to the public GitHub repository.**
+> **Important:** Do not upload library inventory data, personal data, accession records, or other confidential information to the public GitHub repository.
 
-## Project Structure
+Libraries should maintain appropriate backups of their local database and application data.
+
+---
+
+# Project Structure
 
 ```text
 LiboInventory/
